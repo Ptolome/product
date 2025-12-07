@@ -1,3 +1,6 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
 .course-card {
     background: $white;
     border-radius: $radius-sm;

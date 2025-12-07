@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 // Flex центрирование
 @mixin flex-center {
     display: flex;

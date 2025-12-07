@@ -1,18 +1,18 @@
 // Импорт модулей
-@import './variables';
-@import './mixins';
-@import './reset';
-@import './animations';
+@use './variables' as *;
+@use './mixins' as *;
+@use './reset' as *;
+@use './animations' as *;
 
 // Базовые стили
-@import './base';
+@use './base' as *;
 
 // Компоненты
-@import './components/container';
-@import './components/header';
-@import './components/main';
-@import './components/sidebar';
-@import './components/filter-btn';
-@import './components/courses';
-@import './components/course-card';
-@import './components/footer';
+@use './components/container' as *;
+@use './components/header' as *;
+@use './components/main' as *;
+@use './components/sidebar' as *;
+@use './components/filter-btn' as *;
+@use './components/courses' as *;
+@use './components/course-card' as *;
+@use './components/footer' as *;
