@@ -1,0 +1,115 @@
+.menu {
+    width: 100%;
+    margin-bottom: $spacing-2xl;
+
+    &__container {
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: $spacing-xl;
+        width: 100%;
+
+        @media (max-width: $breakpoint-desktop) {
+            gap: $spacing-lg;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: $spacing-md;
+        }
+    }
+
+    &__search {
+        min-width: 300px;
+        max-width: 400px;
+
+        @media (max-width: $breakpoint-desktop) {
+            min-width: 250px;
+            max-width: 350px;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    &__filters {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        @media (max-width: $breakpoint-tablet) {
+                
+            display: block;
+            }
+
+        .filters__list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $spacing-sm $spacing-md;
+            align-items: center;
+            width: 100%;
+
+            @media (max-width: $breakpoint-tablet) {
+                justify-content: center;
+            }
+
+            @media (max-width: 480px) {
+                gap: $spacing-xs $spacing-sm;
+            }
+        }
+    }
+
+
+    .search__wrapper {
+        position: relative;
+        min-width: 315px;
+        max-height: 44px;
+        color: $gray-600;
+
+        @media (max-width: $breakpoint-tablet) {
+                max-width: 100%;
+               
+            }
+
+        .search__input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid $border-color;
+            border-radius: $radius-sm;
+            font-size: $font-size-base;
+            background: $white;
+            
+            @include transition-base;
+
+            &:focus, &:hover  {
+                outline: none;
+                border-color: $gray-600;
+                box-shadow: 0 3px 3px 5px rgba($primary-color, 0.1);
+            }
+
+           
+        }
+
+        .search__icon {
+            position: absolute;
+            right: 16px;
+            top: 55%;
+            transform: translateY(-50%);
+            color: $gray-600;
+            pointer-events: none;
+
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+
+  
+}

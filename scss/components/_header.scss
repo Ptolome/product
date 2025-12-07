@@ -1,0 +1,27 @@
+.header {
+    background-color: $white;
+    text-align: center;
+
+    &__subtitle {
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-size: $font-size-5xl;
+        font-weight: $font-weight-bold;
+        text-shadow: 0 4px 4px rgba($color: #000000, $alpha: 0.25);
+       
+        @include tablet {
+            font-size: $font-size-4xl;
+        }
+
+        @include mobile {
+            font-size: $font-size-3xl;
+        }
+    }
+
+    &--transparent {
+        background-color: transparent;
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,109 @@
+.course-card {
+    background: $white;
+    border-radius: $radius-sm;
+
+     @include card-shadow;
+    animation: fadeIn 0.5s ease forwards;
+    &__description {
+        padding: 24px;
+        margin-bottom: 30px;
+    }
+
+    &__category {
+        display: inline-block;
+        padding: $spacing-xs $spacing-md;
+        color: white;
+        border-radius: $radius-sm;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+        padding:1px 8px;
+        margin-bottom: $spacing-md;
+    }
+
+    &__title {
+        font-size: $font-size-xl;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-md;
+        color: $gray-900;
+        line-height: 1.4;
+    }
+
+    &__price {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+        color: $primary-color;
+        display: inline;
+    }
+
+    &__author {
+        color: $gray-700;
+        font-size: $font-size-lg;
+        font-weight: $font-weight-medium;
+        display: inline;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: $spacing-md;
+        border-top: 1px solid $border-color;
+    }
+
+    &__type {
+        color: $secondary-color;
+        font-size: $font-size-sm;
+    }
+
+    &__button {
+        padding: $spacing-sm $spacing-md;
+        background: $primary-color;
+        color: $white;
+        border-radius: $radius-lg;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-medium;
+        @include transition-base;
+
+        &:hover {
+            background: $primary-color;
+        }
+    }
+
+    &--featured {
+        border: 2px solid $primary-color;
+    }
+
+    &--skeleton {
+
+        .course-card__category,
+        .course-card__title,
+        .course-card__price,
+        .course-card__author,
+        .course-card__type {
+            background: $light-gray;
+            color: transparent;
+            border-radius: $radius-md;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .course-card__title {
+            height: 24px;
+            width: 80%;
+        }
+
+        .course-card__price {
+            height: 32px;
+            width: 60px;
+        }
+
+        .course-card__author {
+            height: 16px;
+            width: 120px;
+        }
+
+        .course-card__type {
+            height: 16px;
+            width: 80px;
+        }
+    }
+}

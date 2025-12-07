@@ -1,0 +1,93 @@
+// Flex центрирование
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Flex центрирование по вертикали
+@mixin flex-center-vertical {
+    display: flex;
+    align-items: center;
+}
+
+// Flex центрирование по горизонтали
+@mixin flex-center-horizontal {
+    display: flex;
+    justify-content: center;
+}
+
+// Тень для карточек
+@mixin card-shadow {
+    box-shadow: $shadow-md;
+    transition: transform $transition-base, box-shadow $transition-base;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: $shadow-lg;
+    }
+}
+
+// Тень для элементов
+@mixin shadow-sm {
+    box-shadow: $shadow-sm;
+}
+
+@mixin shadow-md {
+    box-shadow: $shadow-md;
+}
+
+@mixin shadow-lg {
+    box-shadow: $shadow-lg;
+}
+
+// Транзишены
+@mixin transition-fast {
+    transition: all $transition-fast;
+}
+
+@mixin transition-base {
+    transition: all $transition-base;
+}
+
+@mixin transition-slow {
+    transition: all $transition-slow;
+}
+
+// Адаптивные медиа-запросы
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: $breakpoint-desktop) and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin small-mobile {
+    @media (max-width: $breakpoint-mobile) {
+        @content;
+    }
+}
+
+// Скрытие элементов
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

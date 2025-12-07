@@ -1,0 +1,42 @@
+.courses {
+    flex: 1;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: $spacing-xl;
+
+        @include tablet {
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__loading {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: $spacing-2xl;
+        color: $secondary-color;
+    }
+
+    &--grid-2 {
+        .courses__list {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &--grid-3 {
+        .courses__list {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &--grid-4 {
+        .courses__list {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}

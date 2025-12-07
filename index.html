@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Online Courses</title>
+    <link rel="stylesheet" href="scss/styles.scss">
+</head>
+
+<body class="page">
+    <header class="header container">
+        <h6 class="header__subtitle">Enjoy your studying!</h6>
+        <h1 class="header__title">Our online courses</h1>
+    </header>
+
+    <main class="main">
+        <div class="main__container container">
+     
+        <section class="menu">
+            <div class="menu__container">
+                <div class="menu__content">
+                    <div class="menu__filters">
+                        <div class="filters__list" id="categoryFilters"></div>
+                        <div class="search__wrapper">
+                            <input type="text" class="search__input" id="searchInput" placeholder="Search courses...">
+                            <div class="search__icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+           
+            <section class="courses">
+                <div class="courses__list" id="coursesList">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container">
+            <button class="footer_btn">
+                <img src="./assets/icons/Convert.svg" alt="icon reload">
+                 <span>Load more</span></button>
+        </div>
+    </footer>
+    
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+.footer {
+
+    &__container {
+        @include flex-center;
+    }
+    
+    &__btn {
+        @include flex-center;
+        gap:16px;
+    }
+}

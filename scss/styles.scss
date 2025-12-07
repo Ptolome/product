@@ -1,0 +1,18 @@
+// Импорт модулей
+@import './variables';
+@import './mixins';
+@import './reset';
+@import './animations';
+
+// Базовые стили
+@import './base';
+
+// Компоненты
+@import './components/container';
+@import './components/header';
+@import './components/main';
+@import './components/sidebar';
+@import './components/filter-btn';
+@import './components/courses';
+@import './components/course-card';
+@import './components/footer';
